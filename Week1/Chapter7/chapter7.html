@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React State</title>
+    
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel (needed for JSX support) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- This is where our React app will be rendered -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // Import useState Hook
+        function HomePage() {
+            // Create a state variable for likes
+            const [likes, setLikes] = React.useState(0);
+
+            // Define a function to handle clicks
+            function handleClick() {
+                setLikes(likes + 1); // Increment likes by 1
+            }
+
+            return (
+                <div>
+                    <h1>React State Example</h1>
+                    
+                    {/* Displaying the Like count */}
+                    <button onClick={handleClick}>
+                        Like ({likes})
+                    </button>
+                </div>
+            );
+        }
+
+        // Render the Component Inside #app
+        const domNode = document.getElementById("app");
+        const root = ReactDOM.createRoot(domNode);
+        root.render(<HomePage />);
+    </script>
+</body>
+</html>

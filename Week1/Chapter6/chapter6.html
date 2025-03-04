@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Props</title>
+    
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel (needed for JSX support) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- This is where our React app will be rendered -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // Define a React Component with Props
+        function Header({ title }) {
+            return <h1>{title}</h1>;
+        }
+
+        // Define a Parent Component (HomePage)
+        function HomePage() {
+            return (
+                <div>
+                    {/* Passing different titles to the Header component */}
+                    <Header title="Welcome to React Props!" />
+                    <Header title="Learning JSX is fun!" />
+                </div>
+            );
+        }
+
+        // Render the Component Inside #app
+        const domNode = document.getElementById("app");
+        const root = ReactDOM.createRoot(domNode);
+        root.render(<HomePage />);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with React</title>
+
+    <!-- Load React and ReactDOM from a CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Load Babel to enable JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- The root container where React will render components -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // Select the div element with the ID 'app'
+        const domNode = document.getElementById("app");
+
+        // Create a root instance for React rendering
+        const root = ReactDOM.createRoot(domNode);
+
+        // Render an H1 element dynamically using JSX
+        root.render(<h1>Develop. Preview. Ship.</h1>);
+    </script>
+</body>
+</html>

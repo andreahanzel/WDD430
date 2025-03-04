@@ -1,4 +1,4 @@
-# Chapter 2: Rendering UI & The DOM
+# CHAPTER 2: Rendering UI & The DOM
 
 ## What is the DOM?
 

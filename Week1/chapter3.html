@@ -1,0 +1,39 @@
+<!-- CHAPTER 3: Updating UI with JavaScript -->
+<!-- Topic: DOM Manipulation -->
+<!-- DOM Manipulation is the process of changing the structure of a web page using JavaScript. -->
+<!-- The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of nodes. -->
+<!-- Example: Adding an H1 Element: The following example demonstrates how to update the UI by adding an `<h1>` element using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Charset should be placed in the head -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag should be placed in the head -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <!-- The container where we will dynamically insert an H1 element -->
+    <div id="app"></div>
+
+    <script type="text/javascript">
+        // Select the div element with the ID 'app'
+        const app = document.getElementById('app');
+
+        // Create a new H1 element
+        const header = document.createElement('h1');
+
+        // Create a text node for the H1 element
+        const text = document.createTextNode('Develop. Preview. Ship.');
+
+        // Append the text to the H1 element
+        header.appendChild(text);
+
+        // Place the H1 element inside the div
+        app.appendChild(header);
+    </script>
+</body>
+</html>

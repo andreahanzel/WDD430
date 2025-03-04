@@ -1,4 +1,4 @@
-# Chapter 1: React vs Next.js
+# CHAPTER 1: React vs Next.js
 
 ## What is React?
 
